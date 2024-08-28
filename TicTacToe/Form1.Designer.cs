@@ -74,7 +74,6 @@
             this.label1.Size = new System.Drawing.Size(292, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tik Tok Toon";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
@@ -213,6 +212,7 @@
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
             // btnReset
             // 
@@ -223,6 +223,7 @@
             this.btnReset.TabIndex = 1;
             this.btnReset.Text = "&Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnNewGame
             // 
@@ -233,6 +234,7 @@
             this.btnNewGame.TabIndex = 0;
             this.btnNewGame.Text = " New Game";
             this.btnNewGame.UseVisualStyleBackColor = true;
+            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
             // panel4
             // 

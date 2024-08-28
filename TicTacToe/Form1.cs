@@ -13,14 +13,20 @@ namespace TicTacToe
     public partial class Form1 : Form
     {
         /// <summary>
-        /// 
+        /// Determines which players turn it is (true for Player X, false for Player O).
         /// </summary>
         Boolean checker;
-        int playerXScore = 0; // Track score for player X
-        int playerOScore = 0; // Track score for player O
-
         /// <summary>
-        /// 
+        /// Track score for player X
+        /// </summary>
+        int playerXScore = 0;
+        /// <summary>
+        /// Track score for player O
+        /// </summary>
+        int playerOScore = 0;
+        //==========================================================================================================================================================================//
+        /// <summary>
+        /// Disables all Tic Tac Toe buttons, preventing further moves.
         /// </summary>
         void Enable_False()
         {
@@ -35,7 +41,9 @@ namespace TicTacToe
             btnTic9.Enabled = false;
         }
         //==========================================================================================================================================================================//
-
+        /// <summary>
+        /// Checks for a win condition and updates the score and game status accordingly.
+        /// </summary>
         void Score()
         {
             // Check for Player X win
@@ -70,6 +78,10 @@ namespace TicTacToe
                 lblScoreO.Text = playerOScore.ToString();
             }
         }
+        //==========================================================================================================================================================================//
+        /// <summary>
+        /// Resets the game board and enables all buttons for a new game.
+        /// </summary>
         void Reset()
         {
             btnTic1.Enabled = true;
@@ -104,6 +116,12 @@ namespace TicTacToe
 
             checker = true; // Reset turn to Player X
         }
+        //==========================================================================================================================================================================//
+        /// <summary>
+        /// Handles the click event for each Tic Tac Toe button, updates the game board, and checks the game status.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnTic_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
@@ -122,35 +140,53 @@ namespace TicTacToe
             btn.Enabled = false;
             Score();
         }
-        private void btnNewGame_Click(object sender, EventArgs e)
-        {
-            Reset();
-        }
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            playerXScore = 0;
-            playerOScore = 0;
-            lblPlayerX.Text = "0";
-            lblPlayerO.Text = "0";
-            Reset();
-        }
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
         //==========================================================================================================================================================================//
+        /// <summary>
+        /// Initializes the form and sets the initial player turn to Player X.
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
             checker = true; // Start with Player X
         }
 
-//==========================================================================================================================================================================//
-        // Label Head
-        private void label1_Click(object sender, EventArgs e)
-        {
+        //==========================================================================================================================================================================//
 
+        /// <summary>
+        /// resets the game board for a new game.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
+        private void btnNewGame_Click(object sender, EventArgs e)
+        {
+            Reset();
         }
+        //==========================================================================================================================================================================//
+        /// <summary>
+        /// resets both the game board and the player scores
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            playerXScore = 0;
+            playerOScore = 0;
+            lblScoreX.Text = "0";
+            lblScoreO.Text = "0";
+            Reset();
+        }
+        //==========================================================================================================================================================================//
+        /// <summary>
+        /// closes the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnExit_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        //==========================================================================================================================================================================//
     }
 }
-//==========================================================================END=OF=FILE=====================================================================================//
+//==========================================================================END=OF=FILE=====================================================================================// 
