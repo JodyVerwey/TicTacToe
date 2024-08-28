@@ -46,10 +46,10 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btnNewGame = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblScoreO = new System.Windows.Forms.Label();
+            this.lblScoreX = new System.Windows.Forms.Label();
             this.lblPlayerO = new System.Windows.Forms.Label();
             this.lblPlayerX = new System.Windows.Forms.Label();
-            this.lblScoreX = new System.Windows.Forms.Label();
-            this.lblScoreO = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -247,6 +247,32 @@
             this.panel4.Size = new System.Drawing.Size(510, 179);
             this.panel4.TabIndex = 5;
             // 
+            // lblScoreO
+            // 
+            this.lblScoreO.AutoSize = true;
+            this.lblScoreO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblScoreO.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblScoreO.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScoreO.ForeColor = System.Drawing.Color.Green;
+            this.lblScoreO.Location = new System.Drawing.Point(263, 96);
+            this.lblScoreO.Name = "lblScoreO";
+            this.lblScoreO.Size = new System.Drawing.Size(38, 41);
+            this.lblScoreO.TabIndex = 3;
+            this.lblScoreO.Text = "0";
+            // 
+            // lblScoreX
+            // 
+            this.lblScoreX.AutoSize = true;
+            this.lblScoreX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblScoreX.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblScoreX.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScoreX.ForeColor = System.Drawing.Color.Green;
+            this.lblScoreX.Location = new System.Drawing.Point(266, 29);
+            this.lblScoreX.Name = "lblScoreX";
+            this.lblScoreX.Size = new System.Drawing.Size(38, 41);
+            this.lblScoreX.TabIndex = 2;
+            this.lblScoreX.Text = "0";
+            // 
             // lblPlayerO
             // 
             this.lblPlayerO.AutoSize = true;
@@ -270,30 +296,6 @@
             this.lblPlayerX.Size = new System.Drawing.Size(157, 41);
             this.lblPlayerX.TabIndex = 0;
             this.lblPlayerX.Text = "Player X:";
-            // 
-            // lblScoreX
-            // 
-            this.lblScoreX.AutoSize = true;
-            this.lblScoreX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblScoreX.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblScoreX.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScoreX.ForeColor = System.Drawing.Color.Green;
-            this.lblScoreX.Location = new System.Drawing.Point(266, 29);
-            this.lblScoreX.Name = "lblScoreX";
-            this.lblScoreX.Size = new System.Drawing.Size(2, 41);
-            this.lblScoreX.TabIndex = 2;
-            // 
-            // lblScoreO
-            // 
-            this.lblScoreO.AutoSize = true;
-            this.lblScoreO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblScoreO.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblScoreO.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScoreO.ForeColor = System.Drawing.Color.Green;
-            this.lblScoreO.Location = new System.Drawing.Point(263, 96);
-            this.lblScoreO.Name = "lblScoreO";
-            this.lblScoreO.Size = new System.Drawing.Size(2, 41);
-            this.lblScoreO.TabIndex = 3;
             // 
             // Form1
             // 
