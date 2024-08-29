@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnTic9 = new System.Windows.Forms.Button();
             this.btnTic6 = new System.Windows.Forms.Button();
@@ -46,37 +44,24 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btnNewGame = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblDrawScore = new System.Windows.Forms.Label();
+            this.lblDraw = new System.Windows.Forms.Label();
             this.lblScoreO = new System.Windows.Forms.Label();
             this.lblScoreX = new System.Windows.Forms.Label();
             this.lblPlayerO = new System.Windows.Forms.Label();
             this.lblPlayerX = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(23, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1227, 65);
-            this.panel1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(522, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(292, 48);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tik Tok Toon";
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.btnTic9);
             this.panel2.Controls.Add(this.btnTic6);
@@ -184,6 +169,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
@@ -194,6 +180,7 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.Gold;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.btnExit);
             this.panel5.Controls.Add(this.btnReset);
@@ -205,49 +192,81 @@
             // 
             // btnExit
             // 
+            this.btnExit.BackColor = System.Drawing.Color.ForestGreen;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(259, 99);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(228, 73);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
             // btnReset
             // 
+            this.btnReset.BackColor = System.Drawing.Color.ForestGreen;
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.Location = new System.Drawing.Point(17, 99);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(223, 73);
             this.btnReset.TabIndex = 1;
-            this.btnReset.Text = "&Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Text = "R&eset";
+            this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnNewGame
             // 
+            this.btnNewGame.BackColor = System.Drawing.Color.ForestGreen;
             this.btnNewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewGame.Location = new System.Drawing.Point(17, 12);
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(470, 73);
             this.btnNewGame.TabIndex = 0;
             this.btnNewGame.Text = " New Game";
-            this.btnNewGame.UseVisualStyleBackColor = true;
+            this.btnNewGame.UseVisualStyleBackColor = false;
             this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(195)))), ((int)(((byte)(1)))));
+            this.panel4.BackgroundImage = global::TicTacToe.Properties.Resources.clearGold;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.lblDrawScore);
+            this.panel4.Controls.Add(this.lblDraw);
             this.panel4.Controls.Add(this.lblScoreO);
             this.panel4.Controls.Add(this.lblScoreX);
             this.panel4.Controls.Add(this.lblPlayerO);
             this.panel4.Controls.Add(this.lblPlayerX);
             this.panel4.Location = new System.Drawing.Point(14, 14);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(510, 179);
+            this.panel4.Size = new System.Drawing.Size(510, 225);
             this.panel4.TabIndex = 5;
+            // 
+            // lblDrawScore
+            // 
+            this.lblDrawScore.AutoSize = true;
+            this.lblDrawScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblDrawScore.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDrawScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDrawScore.ForeColor = System.Drawing.Color.Green;
+            this.lblDrawScore.Location = new System.Drawing.Point(263, 161);
+            this.lblDrawScore.Name = "lblDrawScore";
+            this.lblDrawScore.Size = new System.Drawing.Size(38, 41);
+            this.lblDrawScore.TabIndex = 5;
+            this.lblDrawScore.Text = "0";
+            this.lblDrawScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDraw
+            // 
+            this.lblDraw.BackColor = System.Drawing.Color.ForestGreen;
+            this.lblDraw.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDraw.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDraw.Location = new System.Drawing.Point(36, 161);
+            this.lblDraw.Name = "lblDraw";
+            this.lblDraw.Size = new System.Drawing.Size(160, 41);
+            this.lblDraw.TabIndex = 4;
+            this.lblDraw.Text = "Draws:";
             // 
             // lblScoreO
             // 
@@ -261,6 +280,7 @@
             this.lblScoreO.Size = new System.Drawing.Size(38, 41);
             this.lblScoreO.TabIndex = 3;
             this.lblScoreO.Text = "0";
+            this.lblScoreO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScoreX
             // 
@@ -269,16 +289,17 @@
             this.lblScoreX.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblScoreX.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScoreX.ForeColor = System.Drawing.Color.Green;
-            this.lblScoreX.Location = new System.Drawing.Point(266, 29);
+            this.lblScoreX.Location = new System.Drawing.Point(263, 29);
             this.lblScoreX.Name = "lblScoreX";
             this.lblScoreX.Size = new System.Drawing.Size(38, 41);
             this.lblScoreX.TabIndex = 2;
             this.lblScoreX.Text = "0";
+            this.lblScoreX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPlayerO
             // 
             this.lblPlayerO.AutoSize = true;
-            this.lblPlayerO.BackColor = System.Drawing.Color.Green;
+            this.lblPlayerO.BackColor = System.Drawing.Color.ForestGreen;
             this.lblPlayerO.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblPlayerO.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayerO.Location = new System.Drawing.Point(36, 99);
@@ -290,7 +311,7 @@
             // lblPlayerX
             // 
             this.lblPlayerX.AutoSize = true;
-            this.lblPlayerX.BackColor = System.Drawing.Color.Green;
+            this.lblPlayerX.BackColor = System.Drawing.Color.ForestGreen;
             this.lblPlayerX.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblPlayerX.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayerX.Location = new System.Drawing.Point(36, 29);
@@ -299,22 +320,43 @@
             this.lblPlayerX.TabIndex = 0;
             this.lblPlayerX.Text = "Player X:";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(195)))), ((int)(((byte)(1)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(23, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1227, 65);
+            this.panel1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(429, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(409, 48);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "GBG Tic Tac Toe";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::TicTacToe.Properties.Resources.background_with_luxury_gold_558606_84__1_;
             this.ClientSize = new System.Drawing.Size(1271, 631);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -343,6 +385,8 @@
         private System.Windows.Forms.Button btnTic1;
         private System.Windows.Forms.Label lblScoreO;
         private System.Windows.Forms.Label lblScoreX;
+        private System.Windows.Forms.Label lblDraw;
+        private System.Windows.Forms.Label lblDrawScore;
     }
 }
 
