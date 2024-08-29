@@ -24,6 +24,15 @@ namespace TicTacToe
         /// Track score for player O
         /// </summary>
         int playerOScore = 0;
+        /// <summary>
+        /// Detects Draw
+        /// </summary>
+        bool draw = true;
+        /// <summary>
+        /// Track draw score
+        /// </summary>
+        int drawscore = 0;
+
         //==========================================================================================================================================================================//
         /// <summary>
         /// Disables all Tic Tac Toe buttons, preventing further moves.
@@ -42,7 +51,7 @@ namespace TicTacToe
         }
         //==========================================================================================================================================================================//
         /// <summary>
-        /// Checks for a win condition and updates the score and game status accordingly.
+        /// Checks for a win and draw condition and updates the score and game status accordingly.
         /// </summary>
         void Score()
         {
@@ -60,6 +69,7 @@ namespace TicTacToe
                 MessageBox.Show("Player X Wins!", "Tic Tac Toe", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 playerXScore++;
                 lblScoreX.Text = playerXScore.ToString();
+                draw = false;
             }
 
             // Check for Player O win
@@ -76,7 +86,19 @@ namespace TicTacToe
                 MessageBox.Show("Player O Wins!", "Tic Tac Toe", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 playerOScore++;
                 lblScoreO.Text = playerOScore.ToString();
+                draw = false;
             }
+           
+            // Check for Draw
+            if ((draw && btnTic1.Enabled == false && btnTic2.Enabled == false && btnTic3.Enabled == false) &&
+               (btnTic4.Enabled == false && btnTic5.Enabled == false && btnTic6.Enabled == false) &&
+               (btnTic7.Enabled == false && btnTic8.Enabled == false && btnTic9.Enabled == false))
+            {
+                MessageBox.Show("It's a Draw!","Tic Tac Toe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                drawscore++;
+                lblDrawScore.Text = drawscore.ToString();
+            }
+
         }
         //==========================================================================================================================================================================//
         /// <summary>
@@ -115,6 +137,7 @@ namespace TicTacToe
             btnTic9.BackColor = Color.White;
 
             checker = true; // Reset turn to Player X
+            draw = true; // Reset bool value for new game
         }
         //==========================================================================================================================================================================//
         /// <summary>
@@ -164,7 +187,7 @@ namespace TicTacToe
         }
         //==========================================================================================================================================================================//
         /// <summary>
-        /// resets both the game board and the player scores
+        /// resets both the game board and the player scores and draw score
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -172,8 +195,11 @@ namespace TicTacToe
         {
             playerXScore = 0;
             playerOScore = 0;
+            drawscore = 0;
             lblScoreX.Text = "0";
             lblScoreO.Text = "0";
+            lblDrawScore.Text = "0";
+            
             Reset();
         }
         //==========================================================================================================================================================================//
